@@ -1,4 +1,8 @@
 fastapi
+pydantic
+pyjwt[crypto]
 pyodbc
 python-multipart
+requests
+starlette
 sqlalchemy
