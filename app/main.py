@@ -47,7 +47,7 @@ async def get_device(device_id: int, user=Depends(get_user)):
 
 
 @app.get("/devices/by_gmn/{gmn}", response_model=Device)
-async def get_device(gmn: str, user=Depends(get_user)):
+async def get_device_by_gmn(gmn: str, user=Depends(get_user)):
     return Device(
         id=123,
         gmn=gmn,
@@ -57,7 +57,7 @@ async def get_device(gmn: str, user=Depends(get_user)):
 
 
 @app.get("/devices/by_qr_code/{qr_code}", response_model=Device)
-async def get_device(qr_code: str, user=Depends(get_user)):
+async def get_device_by_qr_code(qr_code: str, user=Depends(get_user)):
     return Device(
         id=123,
         gmn="TODO GMN format",
