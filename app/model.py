@@ -1,27 +1,18 @@
 from datetime import datetime
-from enum import Enum
 from pydantic import BaseModel
-from typing import List, Optional
-
-
-class DeviceStatus(Enum):
-    ON = "on"
-    OFF = "off"
-    MAINTENANCE = "maintenance"
-    OUT_OF_ORDER = "out_of_order"
+from typing import List
 
 
 class Device(BaseModel):
-    id: int = None
-    gmn: Optional[str] = None
-    qr_code: Optional[str] = None
+    id: str = None
+    date_added: datetime = None
     documents: List[str] = None
 
 
 class DeviceEvent(BaseModel):
-    id: int = None
-    device_id: int = None
-    device_status: DeviceStatus = None
+    id: str = None
+    device_id: str = None
+    device_status: str = None
     device_location: str = None
     device_geolocation: str = None
     device_capacity: int = None
