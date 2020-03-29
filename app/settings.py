@@ -1,5 +1,6 @@
 import os
 
+DB_URL = os.environ["DB_URL"]
 APP_BASE_URL = os.environ["APP_BASE_URL"]
 ALLOW_ANONYMOUS = bool(os.environ.get("ALLOW_ANONYMOUS", ""))
 KEYCLOAK_CLIENT_ID = os.environ["KEYCLOAK_CLIENT_ID"]
